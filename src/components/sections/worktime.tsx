@@ -45,7 +45,7 @@ const WorkTime = () => {
       <div className="flex justify-between mt-4">
         {/* Check In */}
         <div className="flex flex-col gap-2 items-center justify-center mt-2">
-          <LuClock10 className="text-7xl text-red-600 mx-auto" />
+          <LuClock10 className="text-4xl md:text-7xl text-red-600 mx-auto" />
           <span className="font-bold text-lg">
             {checkInTime === "" ? "--:--" : dayjs(checkInTime).format("hh:mm")}
           </span>
@@ -54,7 +54,7 @@ const WorkTime = () => {
 
         {/* Working hours */}
         <div className="flex flex-col gap-2 items-center justify-center mt-2">
-          <BsArrowClockwise className="text-7xl text-red-600 mx-auto" />
+          <BsArrowClockwise className="text-4xl md:text-7xl text-red-600 mx-auto" />
           <span className="font-bold text-2xl text-red-600">
             {liveTime === "" ? "--:--" : liveTime}
           </span>
@@ -63,7 +63,7 @@ const WorkTime = () => {
 
         {/* Check Out */}
         <div className="flex flex-col gap-2 items-center justify-center mt-2">
-          <LuClock6 className="text-7xl text-red-600 mx-auto" />
+          <LuClock6 className="text-4xl md:text-7xl text-red-600 mx-auto" />
           <span className="font-bold text-lg">
             {checkOutTime === ""
               ? "--:--"

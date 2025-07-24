@@ -29,7 +29,7 @@ const Header = () => {
 
   return (
     <div>
-      <div className="p-8 bg-white shadow-md flex justify-between items-center w-full">
+      <div className="p-4 md:p-8 py-8 bg-white shadow-md flex justify-between items-center w-full">
         <div className="flex items-center gap-4 text-xl cursor-pointer">
           {isNotificationOpen && <FaArrowLeft onClick={onClickBack} />}
           <h1 className="font-bold text-red-600 text-2xl">

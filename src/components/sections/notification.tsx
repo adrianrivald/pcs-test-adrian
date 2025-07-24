@@ -26,11 +26,11 @@ const Notification = () => {
       {notifications?.map((notification) => (
         <div
           onClick={() => onClickNotification(notification.id)}
-          className={`cursor-pointer transition-all flex justify-between py-4 px-8 ${
+          className={`cursor-pointer transition-all flex justify-between py-4 px-4 md:px-8 ${
             notification.isOpened ? "bg-white" : "bg-blue-100 hover:bg-blue-50"
           }`}
         >
-          <div className="flex  gap-4">
+          <div className="flex gap-4">
             {/* Notif icon */}
             <div className="w-[70px] h-[70px] flex-none rounded-lg p-1 flex justify-center items-center bg-red-300">
               <BiCoin />

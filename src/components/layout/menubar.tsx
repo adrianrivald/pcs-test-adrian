@@ -23,7 +23,7 @@ const Menubar = () => {
         <HiHome
           className={`${
             location.pathname === "/" ? "text-red-500" : "text-gray-400"
-          } text-4xl`}
+          } text-xl md:text-4xl`}
         />
       ),
     },
@@ -36,7 +36,7 @@ const Menubar = () => {
             location.pathname === "/attendance"
               ? "text-red-500"
               : "text-gray-400"
-          } text-4xl`}
+          } text-xl md:text-4xl`}
         />
       ),
     },
@@ -49,13 +49,13 @@ const Menubar = () => {
           ? "Check Out"
           : "Reset",
       icon: (
-        <div className="absolute shadow-xl -top-16 w-[120px] h-[120px] bg-red-500 p-4 flex justify-center items-center rounded-full">
+        <div className="absolute shadow-xl -top-6 md:-top-16 w-[70px] md:w-[120px] h-[70px] md:h-[120px] bg-red-500 p-4 flex justify-center items-center rounded-full">
           {checkInTime === "" ? (
-            <GrLogin className="text-white text-4xl" />
+            <GrLogin className="text-white text-xl md:text-4xl" />
           ) : checkOutTime === "" ? (
-            <GrLogout className="text-white text-4xl" />
+            <GrLogout className="text-white text-xl md:text-4xl" />
           ) : (
-            <GiClockwiseRotation className="text-white text-4xl" />
+            <GiClockwiseRotation className="text-white text-xl md:text-4xl" />
           )}
         </div>
       ),
@@ -69,7 +69,7 @@ const Menubar = () => {
             location.pathname === "/attendance"
               ? "text-red-500"
               : "text-gray-400"
-          } text-4xl`}
+          } text-xl md:text-4xl`}
         />
       ),
     },
@@ -82,7 +82,7 @@ const Menubar = () => {
             location.pathname === "/attendance"
               ? "text-red-500"
               : "text-gray-400"
-          } text-4xl`}
+          } text-xl md:text-4xl`}
         />
       ),
     },
@@ -111,7 +111,7 @@ const Menubar = () => {
   };
 
   return (
-    <div className="fixed bottom-0 p-8 bg-white shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] max-w-[768px] mx-auto flex justify-between items-end w-full">
+    <div className="fixed bottom-0 p-4 py-8 md:p-8 bg-white shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] max-w-[768px] mx-auto flex justify-between items-end w-full">
       {/* Menus */}
       {menus?.map((menu) => (
         <div
@@ -120,7 +120,7 @@ const Menubar = () => {
         >
           {menu.icon}
           <span
-            className={`text-xl ${
+            className={`text-md md:text-xl ${
               location.pathname === menu.path
                 ? "font-bold text-red-500"
                 : "font-normal text-gray-400"

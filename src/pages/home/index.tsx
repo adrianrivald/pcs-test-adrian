@@ -18,7 +18,7 @@ export default function HomePage() {
         />
       </Helmet>
 
-      <div className="my-8 px-8">
+      <div className="my-8 px-4 md:px-8">
         {/* Hello section */}
         <h1 className="text-xl">Hi, Good morning!</h1>
 
@@ -62,17 +62,17 @@ export default function HomePage() {
       </div>
 
       {/* PCS News */}
-      <div className="px-8">
+      <div className="px-4 md:px-8">
         <h2 className="text-lg font-bold">PCS News</h2>
       </div>
       <News />
 
       {/* Online Section */}
-      <div className="mt-4 mb-8 px-8">
+      <div className="mt-4 mb-8 px-4 md:px-8">
         <h2 className="text-lg font-bold">Online</h2>
 
         <div className="bg-white shadow-xl rounded-2xl p-4 flex items-start justify-center mt-4">
-          {Array.from({ length: 8 }).map(() => (
+          {Array.from({ length: 3 }).map(() => (
             <div className="flex flex-col gap-1 justify-center items-center -ml-4">
               <div className="w-[75px] h-[75px] rounded-full bg-red-600 border border-white border-3"></div>
               <span className="font-bold text-lg">Jefri</span>
