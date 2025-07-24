@@ -50,13 +50,13 @@ const Menubar = () => {
           ? "Check Out"
           : "Reset",
       icon: (
-        <div className="transition-all absolute shadow-xl -top-6 md:-top-16 w-[70px] md:w-[120px] h-[70px] md:h-[120px] bg-red-500 p-4 flex justify-center items-center rounded-full">
+        <div className="transition-all absolute shadow-xl -top-10 md:-top-16 w-[90px] md:w-[120px] h-[90px] md:h-[120px] bg-red-500 p-4 flex justify-center items-center rounded-full">
           {checkInTime === "" ? (
-            <GrLogin className="text-white text-3xl md:text-4xl" />
+            <GrLogin className="text-white text-3xl md:text-5xl" />
           ) : checkOutTime === "" ? (
-            <GrLogout className="text-white text-3xl md:text-4xl" />
+            <GrLogout className="text-white text-3xl md:text-5xl" />
           ) : (
-            <GiClockwiseRotation className="text-white text-3xl md:text-4xl" />
+            <GiClockwiseRotation className="text-white text-3xl md:text-5xl" />
           )}
         </div>
       ),
@@ -110,6 +110,8 @@ const Menubar = () => {
           reset();
         }
       }
+    } else {
+      toast("Coming soon, stay tune!");
     }
   };
 
