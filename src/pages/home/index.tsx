@@ -76,9 +76,9 @@ export default function HomePage() {
       <div className="mt-4 mb-8 px-4 md:px-8">
         <h2 className="text-lg font-bold">Online</h2>
 
-        <div className="bg-white shadow-xl rounded-2xl p-4 flex items-start justify-center mt-4">
+        <div className="bg-white shadow-xl rounded-2xl py-8 px-4 flex items-start justify-center mt-4">
           {onlinePersons.map((person, index) => (
-            <div className="flex flex-col gap-1 justify-center items-center -ml-4">
+            <div className=" flex flex-col gap-1 justify-center items-center -ml-4">
               <img
                 src={`https://avatar.iran.liara.run/public/${index + 1}`}
                 className="w-[75px] h-[75px] rounded-full border border-white border-3"
@@ -86,7 +86,7 @@ export default function HomePage() {
               <span className="font-bold text-sm md:text-lg">
                 {person.firstName}
               </span>
-              <span className="text-sm">{person.lastName}</span>
+              <span className="text-xs">{person.lastName}</span>
             </div>
           ))}
           <div className="flex flex-col gap-1 justify-center items-center -ml-4">

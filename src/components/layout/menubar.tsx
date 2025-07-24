@@ -24,7 +24,7 @@ const Menubar = () => {
         <HiHome
           className={`${
             location.pathname === "/" ? "text-red-500" : "text-gray-400"
-          } text-xl md:text-4xl`}
+          } text-3xl md:text-4xl`}
         />
       ),
     },
@@ -37,7 +37,7 @@ const Menubar = () => {
             location.pathname === "/attendance"
               ? "text-red-500"
               : "text-gray-400"
-          } text-xl md:text-4xl`}
+          } text-3xl md:text-4xl`}
         />
       ),
     },
@@ -52,11 +52,11 @@ const Menubar = () => {
       icon: (
         <div className="transition-all absolute shadow-xl -top-6 md:-top-16 w-[70px] md:w-[120px] h-[70px] md:h-[120px] bg-red-500 p-4 flex justify-center items-center rounded-full">
           {checkInTime === "" ? (
-            <GrLogin className="text-white text-xl md:text-4xl" />
+            <GrLogin className="text-white text-3xl md:text-4xl" />
           ) : checkOutTime === "" ? (
-            <GrLogout className="text-white text-xl md:text-4xl" />
+            <GrLogout className="text-white text-3xl md:text-4xl" />
           ) : (
-            <GiClockwiseRotation className="text-white text-xl md:text-4xl" />
+            <GiClockwiseRotation className="text-white text-3xl md:text-4xl" />
           )}
         </div>
       ),
@@ -70,7 +70,7 @@ const Menubar = () => {
             location.pathname === "/attendance"
               ? "text-red-500"
               : "text-gray-400"
-          } text-xl md:text-4xl`}
+          } text-3xl md:text-4xl`}
         />
       ),
     },
@@ -83,7 +83,7 @@ const Menubar = () => {
             location.pathname === "/attendance"
               ? "text-red-500"
               : "text-gray-400"
-          } text-xl md:text-4xl`}
+          } text-3xl md:text-4xl`}
         />
       ),
     },
@@ -123,7 +123,7 @@ const Menubar = () => {
         >
           {menu.icon}
           <span
-            className={`text-sm md:text-xl ${
+            className={`text-xs md:text-xl ${
               location.pathname === menu.path || menu.path === "/toggle-time"
                 ? "font-bold text-red-500"
                 : "font-normal text-gray-400"

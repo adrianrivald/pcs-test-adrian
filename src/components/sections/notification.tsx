@@ -1,8 +1,11 @@
-import { BiCoin } from "react-icons/bi";
+import { BiAlarm, BiCheck, BiQuestionMark, BiX } from "react-icons/bi";
 import {
   useNotificationStore,
   type NotificationData,
 } from "../../store/useNotification";
+import { GiMedicinePills } from "react-icons/gi";
+import { BsArrowRight } from "react-icons/bs";
+import { FaCoins } from "react-icons/fa";
 
 const Notification = () => {
   const { notifications, setNotifications } = useNotificationStore();
@@ -21,6 +24,42 @@ const Notification = () => {
     setNotifications(updated);
   };
 
+  const renderNotifIcon = (notifType: string) => {
+    switch (notifType) {
+      case "Reimbursement":
+        return <FaCoins className="text-white text-4xl" />;
+      case "Sickness":
+        return <GiMedicinePills className="text-white text-4xl" />;
+      case "Overtime":
+        return <BiAlarm className="text-white text-4xl" />;
+      default:
+        return <BiQuestionMark className="text-white text-4xl" />;
+    }
+  };
+
+  const renderStatusIcon = (statusType: string) => {
+    switch (statusType) {
+      case "success":
+        return (
+          <div className="bg-green-500 absolute -bottom-1 -right-1 rounded-full text-white p-[2px]">
+            <BiCheck />
+          </div>
+        );
+      case "failed":
+        return (
+          <div className="bg-red-500 absolute -bottom-1 -right-1 rounded-full text-white p-[2px]">
+            <BiX />
+          </div>
+        );
+      case "pending":
+        return (
+          <div className="bg-blue-500 absolute -bottom-1 -right-1 rounded-full text-white p-[2px]">
+            <BsArrowRight />
+          </div>
+        );
+    }
+  };
+
   return (
     <div>
       {notifications?.map((notification) => (
@@ -32,8 +71,9 @@ const Notification = () => {
         >
           <div className="flex gap-4">
             {/* Notif icon */}
-            <div className="w-[70px] h-[70px] flex-none rounded-lg p-1 flex justify-center items-center bg-red-300">
-              <BiCoin />
+            <div className="relative w-[70px] h-[70px] flex-none rounded-lg p-1 flex justify-center items-center bg-red-400">
+              {renderNotifIcon(notification.type)}
+              {renderStatusIcon(notification.status)}
             </div>
             {/* Notif desc */}
             <div className="flex flex-col gap-1">

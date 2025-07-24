@@ -8,6 +8,7 @@ export interface NotificationData  {
     description: string;
     isOpened: boolean;
     timeStamp: string;
+    status: "success" | "failed" | "pending"
 }
 
 interface IRegistrationFormStore {
