@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { BiUser } from "react-icons/bi";
 import News from "../../components/sections/news";
 import WorkTime from "../../components/sections/worktime";
+import { onlinePersons } from "../../constants/onlinePersons";
 
 export default function HomePage() {
   return (
@@ -76,15 +77,20 @@ export default function HomePage() {
         <h2 className="text-lg font-bold">Online</h2>
 
         <div className="bg-white shadow-xl rounded-2xl p-4 flex items-start justify-center mt-4">
-          {Array.from({ length: 3 }).map(() => (
+          {onlinePersons.map((person, index) => (
             <div className="flex flex-col gap-1 justify-center items-center -ml-4">
-              <div className="w-[75px] h-[75px] rounded-full bg-red-600 border border-white border-3"></div>
-              <span className="font-bold text-lg">Jefri</span>
-              <span className="text-sm">Sahid</span>
+              <img
+                src={`https://avatar.iran.liara.run/public/${index + 1}`}
+                className="w-[75px] h-[75px] rounded-full border border-white border-3"
+              />
+              <span className="font-bold text-sm md:text-lg">
+                {person.firstName}
+              </span>
+              <span className="text-sm">{person.lastName}</span>
             </div>
           ))}
           <div className="flex flex-col gap-1 justify-center items-center -ml-4">
-            <div className="w-[75px] h-[75px] rounded-full bg-red-600 border border-white border-3 text-white flex items-center justify-center text-center">
+            <div className="w-[75px] h-[75px] rounded-full bg-red-600 border border-white border-3 text-white flex items-center justify-center text-center text-sm">
               10
               <br /> more
             </div>

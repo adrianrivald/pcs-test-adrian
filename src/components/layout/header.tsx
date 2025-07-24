@@ -42,7 +42,7 @@ const Header = () => {
             className="text-3xl cursor-pointer"
           />
           {notifications?.some((item) => item.isOpened === false) && (
-            <div className="absolute top-2 right-1 bg-red-500 p-1 rounded-full" />
+            <div className="absolute top-0 right-0 bg-red-500 p-1 rounded-full border border-white border-2" />
           )}
         </div>
       </div>

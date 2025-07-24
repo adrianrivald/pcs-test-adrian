@@ -50,7 +50,7 @@ const News = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
-    centerPadding: "5%", // for larger screens
+    centerPadding: "8%", // for larger screens
   };
 
   return (

@@ -7,6 +7,7 @@ import { useWorkingTimeStore } from "../../store/useWorkingTime";
 import dayjs from "dayjs";
 import duration from "dayjs/plugin/duration";
 import { GiClockwiseRotation } from "react-icons/gi";
+import toast from "react-hot-toast";
 
 dayjs.extend(duration);
 const Menubar = () => {
@@ -49,7 +50,7 @@ const Menubar = () => {
           ? "Check Out"
           : "Reset",
       icon: (
-        <div className="absolute shadow-xl -top-6 md:-top-16 w-[70px] md:w-[120px] h-[70px] md:h-[120px] bg-red-500 p-4 flex justify-center items-center rounded-full">
+        <div className="transition-all absolute shadow-xl -top-6 md:-top-16 w-[70px] md:w-[120px] h-[70px] md:h-[120px] bg-red-500 p-4 flex justify-center items-center rounded-full">
           {checkInTime === "" ? (
             <GrLogin className="text-white text-xl md:text-4xl" />
           ) : checkOutTime === "" ? (
@@ -90,10 +91,12 @@ const Menubar = () => {
 
   const handleCheckIn = () => {
     setCheckInTime(dayjs().toISOString());
+    toast("Success check in. Happy working! 🙌");
   };
 
   const handleCheckOut = () => {
     setCheckOutTime(dayjs().toISOString());
+    toast("Success check out. See you again! 👋");
   };
 
   const onClickMenu = (path: string) => {
@@ -121,7 +124,7 @@ const Menubar = () => {
           {menu.icon}
           <span
             className={`text-sm md:text-xl ${
-              location.pathname === menu.path
+              location.pathname === menu.path || menu.path === "/toggle-time"
                 ? "font-bold text-red-500"
                 : "font-normal text-gray-400"
             }`}
