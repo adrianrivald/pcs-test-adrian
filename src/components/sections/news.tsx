@@ -54,7 +54,7 @@ const News = () => {
   };
 
   return (
-    <div className="mx-auto py-10">
+    <div className="mx-auto py-10 overflow-hidden">
       <Slider {...settings}>
         {testimonials.map((t, index) => (
           <div key={index} className="p-4">

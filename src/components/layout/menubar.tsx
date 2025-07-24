@@ -120,7 +120,7 @@ const Menubar = () => {
         >
           {menu.icon}
           <span
-            className={`text-md md:text-xl ${
+            className={`text-sm md:text-xl ${
               location.pathname === menu.path
                 ? "font-bold text-red-500"
                 : "font-normal text-gray-400"

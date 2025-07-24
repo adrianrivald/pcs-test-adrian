@@ -29,18 +29,22 @@ export default function HomePage() {
             {/* Profil picture and bio */}
             <div className="flex gap-3 items-start">
               <div className="flex justify-center items-center rounded-full p-2 bg-white">
-                <BiUser className="text-[5rem] text-black" />
+                <BiUser className="text-[2rem] md:text-[5rem] text-black" />
               </div>
               <div className="flex flex-col">
-                <h2 className="font-bold text-xl">Tabay</h2>
-                <span className="italic">UI/UX Designer</span>
+                <h2 className="font-bold md:text-xl">Tabay</h2>
+                <span className="italic text-sm md:text-md">
+                  UI/UX Designer
+                </span>
               </div>
             </div>
 
             {/* Join date */}
             <div className="flex flex-col ">
-              <span className="italic text-right">Member since</span>
-              <h2 className="font-bold text-xl">01 Juni 2021</h2>
+              <span className="italic text-right text-sm md:text-md">
+                Member since
+              </span>
+              <h2 className="font-bold md:text-xl">01 Juni 2021</h2>
             </div>
           </div>
 
@@ -48,8 +52,8 @@ export default function HomePage() {
           <div className="flex justify-between items-end mt-4">
             {/* Location */}
             <div className="flex flex-col">
-              <span className="italic">Location</span>
-              <h2 className="font-bold text-xl">Kantor Sahid</h2>
+              <span className="italic text-sm md:text-md">Location</span>
+              <h2 className="font-bold md:text-xl">Kantor Sahid</h2>
             </div>
 
             {/* Additional info */}
