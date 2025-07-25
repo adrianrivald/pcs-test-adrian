@@ -1,5 +1,5 @@
 
-export const testimonials = [
+export const news = [
   {
     name: "Ana Riswati",
     day: "Senin",

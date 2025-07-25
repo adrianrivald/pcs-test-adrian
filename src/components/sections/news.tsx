@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { testimonials } from "../../constants/testimonials";
+import { news } from "../../constants/news";
 
 const News = () => {
   const settings = {
@@ -17,9 +17,9 @@ const News = () => {
   return (
     <div className="mx-auto py-10 overflow-hidden">
       <Slider {...settings}>
-        {testimonials.map((t, index) => (
+        {news.map((t, index) => (
           <div key={index} className="p-4">
-            <div className="bg-white shadow-lg rounded-2xl p-4">
+            <div className="bg-white shadow-lg rounded-3xl p-4">
               <div className="flex justify-between items-start">
                 <div className="flex items-center space-x-2">
                   <img

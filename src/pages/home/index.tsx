@@ -80,16 +80,16 @@ export default function HomePage() {
       {/* Online Section */}
       <div className="mt-4 mb-8 px-4 md:px-8">
         <h2 className="text-lg font-bold">Online</h2>
-        <div className="bg-white p-4 rounded-xl shadow-lg w-full max-w-5xl mx-auto mt-4">
+        <div className="bg-white py-8 px-4 rounded-3xl shadow-lg w-full max-w-5xl mx-auto mt-4">
           <div className="flex justify-center items-start overflow-x-auto px-2">
             {onlinePersons.map((person, index) => (
               <div
                 key={index}
                 className={`flex flex-col items-center text-sm flex-shrink-0 w-[70px] sm:w-[80px] md:w-[90px] ${
-                  index !== 0 ? "-ml-8 sm:-ml-10 md:-ml-12" : ""
+                  index !== 0 ? "-ml-8" : ""
                 }`}
               >
-                <Avatar className="w-10 h-10 border-3 border-white shadow-md">
+                <Avatar className="w-12 h-12 border-3 border-white shadow-md">
                   <AvatarImage src={person.image} alt={person.name} />
                   <AvatarFallback>{person.name.charAt(0)}</AvatarFallback>
                 </Avatar>
@@ -100,8 +100,8 @@ export default function HomePage() {
               </div>
             ))}
 
-            <div className="flex flex-col items-center justify-center flex-shrink-0 w-[70px] sm:w-[80px] md:w-[90px] -ml-8 sm:-ml-10 md:-ml-12">
-              <div className="w-10 h-10 rounded-full bg-red-500 text-white flex items-center justify-center text-[10px] text-center font-bold">
+            <div className="flex flex-col items-center justify-center flex-shrink-0 w-[70px] sm:w-[80px] md:w-[90px] -ml-8">
+              <div className="w-12 h-12 rounded-full bg-red-500 text-white flex items-center justify-center text-[10px] text-center font-bold">
                 10
                 <br />
                 more
