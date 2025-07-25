@@ -47,7 +47,7 @@ const WorkTime = () => {
         <div className="flex flex-col gap-2 items-center justify-center mt-2">
           <LuClock10 className="text-4xl md:text-7xl text-red-600 mx-auto" />
           <span className="font-bold text-lg">
-            {checkInTime === "" ? "--:--" : dayjs(checkInTime).format("hh:mm")}
+            {checkInTime === "" ? "--:--" : dayjs(checkInTime).format("HH:mm")}
           </span>
           <span>Check in</span>
         </div>
@@ -67,7 +67,7 @@ const WorkTime = () => {
           <span className="font-bold text-lg">
             {checkOutTime === ""
               ? "--:--"
-              : dayjs(checkOutTime).format("hh:mm")}
+              : dayjs(checkOutTime).format("HH:mm")}
           </span>
           <span>Check Out</span>
         </div>

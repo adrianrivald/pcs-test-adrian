@@ -6,6 +6,7 @@ import {
 import { GiMedicinePills } from "react-icons/gi";
 import { BsArrowRight } from "react-icons/bs";
 import { FaCoins } from "react-icons/fa";
+import { formatTimeDescription } from "../../utils/formatDate";
 
 const Notification = () => {
   const { notifications, setNotifications } = useNotificationStore();
@@ -82,7 +83,7 @@ const Notification = () => {
             </div>
           </div>
           <div className="flex-none  text-gray-400 text-sm">
-            {notification.timeStamp}
+            {formatTimeDescription(notification.timeStamp)}
           </div>
         </div>
       ))}
