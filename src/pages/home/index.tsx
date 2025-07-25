@@ -5,7 +5,7 @@ import WorkTime from "../../components/sections/worktime";
 import { onlinePersons } from "../../constants/onlinePersons";
 
 export default function HomePage() {
-  const avatarSize = Math.max(40, 100 - onlinePersons.length * 5); // minimum size is 40px
+  const avatarSize = Math.max(40, 120 - onlinePersons.length * 5); // minimum size is 40px
 
   return (
     <>
