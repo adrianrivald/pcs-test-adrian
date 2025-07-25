@@ -1,27 +1,11 @@
 export const onlinePersons = [
-    {
-        avatar: "/avatar/adrian.svg",
-        firstName: "Adrian",
-        lastName: "Rivaldy"
-    },
-    {
-        avatar: "/avatar/aguero.svg",
-        firstName: "Sergio",
-        lastName: "Aguero"
-    },
-    {
-        avatar: "/avatar/thomas.svg",
-        firstName: "Thomas",
-        lastName: "Muller"
-    },
-    {
-        avatar: "/avatar/nico.svg",
-        firstName: "Nico",
-        lastName: "Gonzalez"
-    },
-    {
-        avatar: "/avatar/erling.svg",
-        firstName: "Erling",
-        lastName: "Haaland"
-    },
+    
+    { name: "Jefril", location: "Sahid", image: "https://i.pravatar.cc/100?u=jefril" },
+    { name: "Zasami", location: "BSD", image: "https://i.pravatar.cc/100?u=zasami" },
+    { name: "Sam", location: "Sahid", image: "https://i.pravatar.cc/100?u=sam" },
+    { name: "Aldo", location: "Sahid", image: "https://i.pravatar.cc/100?u=aldox" },
+    { name: "Erwin", location: "Sahid", image: "https://i.pravatar.cc/100?u=erwin" },
+    { name: "Arye", location: "BSD", image: "https://i.pravatar.cc/100?u=arye" },
+    { name: "Risya", location: "BSD", image: "https://i.pravatar.cc/100?u=risya" },
+    { name: "Nesha", location: "WFH", image: "https://i.pravatar.cc/100?u=nesha" },
 ]

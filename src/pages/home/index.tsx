@@ -3,10 +3,13 @@ import { BiUser } from "react-icons/bi";
 import News from "../../components/sections/news";
 import WorkTime from "../../components/sections/worktime";
 import { onlinePersons } from "../../constants/onlinePersons";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "../../components/ui/avatar";
 
 export default function HomePage() {
-  const avatarSize = Math.max(40, 120 - onlinePersons.length * 5); // minimum size is 40px
-
   return (
     <>
       <Helmet>
@@ -78,33 +81,30 @@ export default function HomePage() {
       <div className="mt-4 mb-8 px-4 md:px-8">
         <h2 className="text-lg font-bold">Online</h2>
 
-        <div className="bg-white shadow-xl rounded-2xl py-8 px-4 flex items-start justify-center mt-4">
-          {onlinePersons.map((person) => {
-            return (
-              <div className=" flex flex-col gap-1 justify-center items-center -ml-4">
-                <img
-                  src={person.avatar}
-                  className={`rounded-full border border-white border-3`}
-                  style={{
-                    width: `${avatarSize}px`,
-                    height: `${avatarSize}px`,
-                  }}
-                />
-                <span className="font-bold text-xs">{person.firstName}</span>
-                <span className="text-[10px]">{person.lastName}</span>
+        <div className="bg-white p-4 rounded-xl shadow-lg w-full max-w-5xl mx-auto mt-4">
+          <div className="flex justify-center items-start  px-4 scrollbar-hide snap-x">
+            {onlinePersons.map((person, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center text-sm min-w-[60px] snap-start -ml-4"
+              >
+                <Avatar className="w-12 h-12 border-1 border-white shadow-md">
+                  <AvatarImage src={person.image} alt={person.name} />
+                  <AvatarFallback>{person.name.charAt(0)}</AvatarFallback>
+                </Avatar>
+                <span className="font-medium text-xs mt-1">{person.name}</span>
+                <span className="text-gray-500 text-[10px]">
+                  {person.location}
+                </span>
               </div>
-            );
-          })}
-          <div className="flex flex-col gap-1 justify-center items-center -ml-4">
-            <div
-              className={`rounded-full bg-red-600 border border-white border-3 text-white flex items-center justify-center text-center text-sm`}
-              style={{
-                width: `${avatarSize}px`,
-                height: `${avatarSize}px`,
-              }}
-            >
-              10
-              <br /> more
+            ))}
+
+            <div className="flex flex-col items-center justify-center min-w-[60px] -ml-4">
+              <div className="w-12 h-12 rounded-full bg-red-500 text-white flex items-center justify-center text-xs text-center font-bold">
+                10
+                <br />
+                more
+              </div>
             </div>
           </div>
         </div>
