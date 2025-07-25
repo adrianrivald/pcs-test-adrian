@@ -3,11 +3,7 @@ import { BiUser } from "react-icons/bi";
 import News from "../../components/sections/news";
 import WorkTime from "../../components/sections/worktime";
 import { onlinePersons } from "../../constants/onlinePersons";
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "../../components/ui/avatar";
+import { Avatar, AvatarImage } from "../../components/ui/avatar";
 
 export default function HomePage() {
   return (
@@ -85,13 +81,13 @@ export default function HomePage() {
             {onlinePersons.map((person, index) => (
               <div
                 key={index}
-                className={`flex flex-col items-center text-sm flex-shrink-0 w-[70px] sm:w-[80px] md:w-[90px] ${
+                className={`flex flex-col items-center text-sm flex-shrink-0 w-[70px]  ${
                   index !== 0 ? "-ml-8" : ""
                 }`}
               >
                 <Avatar className="w-12 h-12 border-3 border-white">
                   <AvatarImage src={person.image} alt={person.name} />
-                  <AvatarFallback>{person.name.charAt(0)}</AvatarFallback>
+                  {/* <AvatarFallback>{person.name.charAt(0)}</AvatarFallback> */}
                 </Avatar>
                 <span className="font-medium text-xs mt-1">{person.name}</span>
                 <span className="text-gray-500 text-[10px]">
@@ -100,7 +96,7 @@ export default function HomePage() {
               </div>
             ))}
 
-            <div className="flex flex-col items-center justify-center flex-shrink-0 w-[70px] sm:w-[80px] md:w-[90px] -ml-8">
+            <div className="flex flex-col items-center justify-center flex-shrink-0 w-[70px]  -ml-8">
               <div className="w-12 h-12 rounded-full bg-red-500 text-white flex items-center justify-center text-[10px] text-center font-bold">
                 10
                 <br />
