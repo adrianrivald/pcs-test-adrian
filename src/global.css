@@ -62,3 +62,22 @@ input:-webkit-autofill {
   -webkit-text-fill-color: #000 !important;
   transition: background-color 5000s ease-in-out 0s;
 }
+/* App.css or a relevant stylesheet */
+.slick-dots {
+  bottom: -30px !important; /* move dots lower */
+}
+
+.slick-dots li {
+  margin: 0 5px;
+}
+
+.slick-dots li button:before {
+  font-size: 14px !important;
+  color: gray;
+  opacity: 0.75;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #fb2c36 !important; /* custom active dot color */
+  opacity: 1;
+}

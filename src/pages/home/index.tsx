@@ -5,6 +5,8 @@ import WorkTime from "../../components/sections/worktime";
 import { onlinePersons } from "../../constants/onlinePersons";
 
 export default function HomePage() {
+  const avatarSize = Math.max(40, 100 - onlinePersons.length * 5); // minimum size is 40px
+
   return (
     <>
       <Helmet>
@@ -77,20 +79,30 @@ export default function HomePage() {
         <h2 className="text-lg font-bold">Online</h2>
 
         <div className="bg-white shadow-xl rounded-2xl py-8 px-4 flex items-start justify-center mt-4">
-          {onlinePersons.map((person, index) => (
-            <div className=" flex flex-col gap-1 justify-center items-center -ml-4">
-              <img
-                src={`https://avatar.iran.liara.run/public/${index + 1}`}
-                className="w-[75px] h-[75px] rounded-full border border-white border-3"
-              />
-              <span className="font-bold text-sm md:text-lg">
-                {person.firstName}
-              </span>
-              <span className="text-xs">{person.lastName}</span>
-            </div>
-          ))}
+          {onlinePersons.map((person, index) => {
+            return (
+              <div className=" flex flex-col gap-1 justify-center items-center -ml-4">
+                <img
+                  src={`https://avatar.iran.liara.run/public/${index + 1}`}
+                  className={`rounded-full border border-white border-3`}
+                  style={{
+                    width: `${avatarSize}px`,
+                    height: `${avatarSize}px`,
+                  }}
+                />
+                <span className="font-bold text-xs">{person.firstName}</span>
+                <span className="text-[10px]">{person.lastName}</span>
+              </div>
+            );
+          })}
           <div className="flex flex-col gap-1 justify-center items-center -ml-4">
-            <div className="w-[75px] h-[75px] rounded-full bg-red-600 border border-white border-3 text-white flex items-center justify-center text-center text-sm">
+            <div
+              className={`rounded-full bg-red-600 border border-white border-3 text-white flex items-center justify-center text-center text-sm`}
+              style={{
+                width: `${avatarSize}px`,
+                height: `${avatarSize}px`,
+              }}
+            >
               10
               <br /> more
             </div>
