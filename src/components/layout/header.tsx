@@ -14,10 +14,12 @@ const Header = () => {
 
   const onClickNotification = () => {
     setIsNotificationOpen(!isNotificationOpen);
+    window.scroll(0, 0);
   };
 
   const onClickBack = () => {
     setIsNotificationOpen(false);
+    window.scroll(0, 0);
   };
 
   useEffect(() => {
@@ -28,7 +30,7 @@ const Header = () => {
   }, [isNotificationOpen]);
 
   return (
-    <div>
+    <div className={`transition-all sticky z-50 top-0`}>
       <div className="p-4 md:p-8 py-8 bg-white shadow-md flex justify-between items-center w-full z-99">
         <div className="flex items-center gap-4 text-xl cursor-pointer">
           {isNotificationOpen && <FaArrowLeft onClick={onClickBack} />}
