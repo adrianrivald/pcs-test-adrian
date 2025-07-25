@@ -89,7 +89,7 @@ export default function HomePage() {
                   index !== 0 ? "-ml-8" : ""
                 }`}
               >
-                <Avatar className="w-12 h-12 border-3 border-white shadow-md">
+                <Avatar className="w-12 h-12 border-3 border-white">
                   <AvatarImage src={person.image} alt={person.name} />
                   <AvatarFallback>{person.name.charAt(0)}</AvatarFallback>
                 </Avatar>
