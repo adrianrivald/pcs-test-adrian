@@ -10,15 +10,6 @@ export const onlinePersons = [
         lastName: "Aguero"
     },
     {
-        avatar: "https://api.multiavatar.com/jeffbezos.svg",
-        firstName: "Jeff",
-        lastName: "Bezos"
-    },
-    {
-        avatar: "https://api.multiavatar.com/jkrowling.svg",
-        firstName: "JK",
-        lastName: "Rowling"
-    }, {
         avatar: "https://api.multiavatar.com/thomas.svg",
         firstName: "Thomas",
         lastName: "Muller"
