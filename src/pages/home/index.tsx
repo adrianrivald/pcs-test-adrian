@@ -79,11 +79,11 @@ export default function HomePage() {
         <h2 className="text-lg font-bold">Online</h2>
 
         <div className="bg-white shadow-xl rounded-2xl py-8 px-4 flex items-start justify-center mt-4">
-          {onlinePersons.map((person, index) => {
+          {onlinePersons.map((person) => {
             return (
               <div className=" flex flex-col gap-1 justify-center items-center -ml-4">
                 <img
-                  src={`https://avatar.iran.liara.run/public/${index + 1}`}
+                  src={person.avatar}
                   className={`rounded-full border border-white border-3`}
                   style={{
                     width: `${avatarSize}px`,
